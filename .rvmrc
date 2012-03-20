@@ -1,1 +1,1 @@
-rvm --create use ruby-1.9.3@twitcoin
+rvm --create use ruby-1.9.2-p290@twitcoin

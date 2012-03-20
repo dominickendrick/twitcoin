@@ -1,5 +1,11 @@
 source 'http://rubygems.org'
 
+group :test do
+  gem "cucumber-rails", "~> 1.3.0"
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
+
 gem 'rails', '3.2.2'
 
 # Bundle edge Rails instead:

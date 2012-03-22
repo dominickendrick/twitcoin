@@ -8,7 +8,7 @@ development:
   encoding: unicode
   database: twitcoin
   pool: 5
-  username: blog
+  username: twitcoin
   password:
 
 # Warning: The database defined as "test" will be erased and
@@ -19,7 +19,7 @@ test: &test
     encoding: unicode
     database: twitcoin
     pool: 5
-    username: blog
+    username: twitcoin
     password:
 
 production:
@@ -27,7 +27,7 @@ production:
     encoding: unicode
     database: twitcoin
     pool: 5
-    username: blog
+    username: twitcoin
     password:
 
 cucumber:

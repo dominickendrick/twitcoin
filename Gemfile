@@ -8,6 +8,7 @@ end
 
 gem 'pg'
 
+gem 'rspec'
 gem 'rails', '3.2.2'
 gem 'thin'
 

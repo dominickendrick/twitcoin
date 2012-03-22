@@ -9,6 +9,7 @@ end
 gem 'pg'
 
 gem 'rails', '3.2.2'
+gem 'thin'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

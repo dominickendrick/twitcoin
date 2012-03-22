@@ -1,4 +1,8 @@
 Twitcoin::Application.routes.draw do
+  get "twitter_parser/index"
+  
+  root :to => "twitter_parser#index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

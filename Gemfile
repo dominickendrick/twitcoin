@@ -1,9 +1,9 @@
 source 'http://rubygems.org'
 
-group :test do
+group :development, :test do
   gem "cucumber-rails", "~> 1.3.0"
-  # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
+  gem 'sqlite3-ruby', :require => 'sqlite3'
 end
 
 gem 'pg'
@@ -12,9 +12,6 @@ gem 'rails', '3.2.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
-
 
 # Gems used only for assets and not required
 # in production environments by default.

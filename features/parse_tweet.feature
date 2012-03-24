@@ -6,4 +6,4 @@ Feature: Viewing a tweet sent to a buyer cced to @demand
 
 Scenario: Viewing a recieved order
     When I am looking at the service homepage
-    Then I will see the tweet "@targetacc 1 beer in 5 minutes please. cc @demand"
+    Then I will see the tweet "@dominickendrick 1 beer in 5 minutes please. cc @demand"

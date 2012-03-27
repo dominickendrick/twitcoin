@@ -1,4 +1,6 @@
 Twitcoin::Application.routes.draw do
+  resources :tweets
+
   get "twitter_parser/index"
   
   root :to => "twitter_parser#index"

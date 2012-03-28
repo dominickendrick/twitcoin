@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+    vendor: Easton Pub
+    customer: dominickendrick
+    tweet_id: 123498832892384717
+    order_str_raw: "1x2;2x1;"
+    order_parsed: "1 Tribute, 2 Becks"
+    order_price: "300"
+    order_currency: "GBP"
+    payment_received: true
+
+

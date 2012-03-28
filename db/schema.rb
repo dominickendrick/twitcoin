@@ -11,13 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120324143414) do
+ActiveRecord::Schema.define(:version => 20120325104754) do
+
+  create_table "orders", :force => true do |t|
+    t.text     "vendor"
+    t.text     "customer"
+    t.float    "tweet_id"
+    t.text     "order_str_raw"
+    t.text     "order_parsed"
+    t.float    "order_price"
+    t.text     "order_currency"
+    t.boolean  "payment_received"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "tweets", :force => true do |t|
     t.string   "name"
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.float    "tweet_id"
+    t.boolean  "processed"
   end
 
 end

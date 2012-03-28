@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20120325104754) do
     t.datetime "updated_at", :null => false
     t.float    "tweet_id"
     t.boolean  "processed"
+
   end
 
 end

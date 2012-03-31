@@ -4,6 +4,8 @@ group :development, :test do
   gem "cucumber-rails", "~> 1.3.0"
   gem 'database_cleaner'
   gem 'sqlite3-ruby', :require => 'sqlite3'
+  gem 'factory_girl'
+  gem "factory_girl_rails", "~> 2.0"
 end
 
 gem 'pg'
@@ -42,7 +44,7 @@ gem 'jquery-rails'
  gem 'capistrano'
 
 # To use debugger
- gem 'ruby-debug19', :require => 'ruby-debug'
+ #gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'twitter'
 

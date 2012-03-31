@@ -1,4 +1,4 @@
-@now
+@wip
 Feature: Viewing a tweet sent to a buyer cced to @demand
     In order to easily buy products 
     As a consumer
@@ -7,8 +7,10 @@ Feature: Viewing a tweet sent to a buyer cced to @demand
 Scenario: Order a beer
     Given I am an twitter user called "dominickendrick"
     When I tweet "I @demand 1 beer in 5 minutes please @eastonpub"
+    Then Twitcoin should process the tweet
+    And send a confirmation message
     Then I should receive a confirmation message
-    
+
 Scenario: Receiving an order for a beer
     Given I am a vendor with a twitter account called "eastonpub"
     And a potential customer on twitter user called "dominickendrick"

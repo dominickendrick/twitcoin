@@ -3,10 +3,10 @@ Given /^I have a valid user who has requested a beer$/ do
 end
 
 When /^I receive that message$/ do
-  
-  pending # express the regexp above with the code you wish you had
+  @response = post("/api/product_request", @valid_message, {"Content-type" => "application/json"})
 end
 
 Then /^I will store that message$/ do
-  pending # express the regexp above with the code you wish you had
+  response_body = JSON.parse(@response.body)
+  response_body["success"].should be_true
 end

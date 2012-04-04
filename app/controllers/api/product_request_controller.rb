@@ -1,9 +1,6 @@
 class Api::ProductRequestController < ApplicationController
   
-  def create
-    
-    pp params
-    
+  def create        
     pr = ProductRequest.new(
         create_params(params)
       )

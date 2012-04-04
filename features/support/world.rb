@@ -1,4 +1,4 @@
-def create_tweet_json(user,status)
+def create_request_json(user,status)
  "{user:{screen_name:#{user}},text:'#{status}'}"
 end
 

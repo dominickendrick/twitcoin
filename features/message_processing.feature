@@ -1,4 +1,4 @@
-@now
+@wip
 Feature: Processing a product request
     In order to handle a request for a beer
     As an application

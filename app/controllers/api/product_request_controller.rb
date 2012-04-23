@@ -1,4 +1,5 @@
 class Api::ProductRequestController < ApplicationController
+  rescue_from ActiveRecord::RecordNotFound, :with => :not_found
   
   def create        
     pr = ProductRequest.new(
@@ -7,6 +8,21 @@ class Api::ProductRequestController < ApplicationController
     if pr.save!
       render :json => { :success =>true, :id => pr.id }.to_json
     end
+  end
+  
+  def index
+    @pr = ProductRequest.all
+    render :json => @pr.to_json
+  end
+  
+  def show
+    render :json => ProductRequest.find(params[:id]).to_json
+  end
+  
+  
+  protected
+  def not_found
+    render :json => "{}"
   end
   
   private

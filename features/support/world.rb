@@ -9,3 +9,7 @@ end
 def default_valid_status
   "I @demand 1 beer in 5 minutes please @eastonpub"
 end
+
+def create_tweet_json
+  
+end

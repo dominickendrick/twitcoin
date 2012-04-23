@@ -26,5 +26,33 @@ describe Api::ProductRequestController do
       expect{ post :create, invalid_params_to_send }.should raise_error
     end
   end
+  
+  context "#show" do
+    before do
+      @pr = ProductRequest.new(params_to_send)
+      @pr.save!
+    end
+    
+    it "should show a product for a valid id request" do
+         response = get :show, :id => @pr.id
+         response.body.should == @pr.to_json
+    end
+    
+    it "should show nothing for an invalid id" do
+         response = get :show, :id => "not_a_valid_id"
+         response.body.should == "{}"
+    end
+  end
+  
+  context "#index" do
+    before do
+      @pr_all = ProductRequest.all
+    end
+    
+    it "should show all products" do
+         response = get :index  
+         response.body.should == @pr_all.to_json
+    end
+  end
 
 end

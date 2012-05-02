@@ -19,7 +19,6 @@ class Api::ProductRequestController < ApplicationController
     render :json => ProductRequest.find(params[:id]).to_json
   end
   
-  
   protected
   def not_found
     render :json => "{}"

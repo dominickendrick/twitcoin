@@ -1,3 +1,8 @@
+def request_beer_via_internal_api
+  
+end
+
+
 def create_request_json(user,status)
  "{user:{screen_name:#{user}},text:'#{status}'}"
 end

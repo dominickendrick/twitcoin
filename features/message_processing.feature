@@ -1,17 +1,10 @@
-@wip
-Feature: Processing a product request
+@now
+Feature: Recieving a product request using the internal API
     In order to handle a request for a beer
     As an application
-    I want to process a users message
+    I want to store a users request
 
-Scenario: Process a valid product request
-    Given I have a valid product request
-    When I receive that message
-    Then I will store that message
-
-Scenario: Process an invalid product request
-    Given I have an invalid product request
-    When I receive that message
-    Then I will store that message
-    
-    
+Scenario: 
+    Given I have made a request for a beer
+    When I view my product request through the internal API
+    Then I will see my product request

@@ -1,12 +1,12 @@
-Given /^I have a valid user who has requested a beer$/ do
-  @valid_message = create_request_json(default_valid_user,default_valid_status)
+Given /^I have made a request for a beer$/ do
+  request_beer_via_internal_api
 end
 
-When /^I receive that message$/ do
-  @response = post("/api/product_request", @valid_message, {"Content-type" => "application/json"})
+When /^I view my product request through the internal API$/ do
+	  pending # express the regexp above with the code you wish you had
 end
 
-Then /^I will store that message$/ do
-  response_body = JSON.parse(@response.body)
-  response_body["success"].should be_true
+Then /^I will see my product request$/ do
+	  pending # express the regexp above with the code you wish you had
 end
+

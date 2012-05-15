@@ -2,6 +2,8 @@ class Api::ProductRequestController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, :with => :not_found
   
   def create        
+puts "called: #{params}"
+    
     pr = ProductRequest.new(
         create_params(params)
       )
@@ -23,7 +25,7 @@ class Api::ProductRequestController < ApplicationController
   def not_found
     render :json => "{}"
   end
-  
+
   private
   def create_params params 
     params.select{|k| [:vendor,:request_text,:customer].include? k.to_sym}

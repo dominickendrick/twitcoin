@@ -1,4 +1,4 @@
-@now
+@wip
 Feature: Recieving a product request using the internal API
     In order to handle a request for a beer
     As an application

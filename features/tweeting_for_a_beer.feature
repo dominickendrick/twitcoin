@@ -1,4 +1,4 @@
-@wip
+@now
 Feature: Viewing a tweet sent to a buyer cced to @demand
     In order to easily buy products 
     As a consumer

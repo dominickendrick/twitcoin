@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120331110452) do
+ActiveRecord::Schema.define(:version => 20120526160352) do
 
   create_table "product_requests", :force => true do |t|
     t.string   "customer"
@@ -20,5 +20,20 @@ ActiveRecord::Schema.define(:version => 20120331110452) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "vendor_id"
+  end
+
+  create_table "vendors", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_foreign_key "products", "vendors", :name => "products_vendor_id_fk"
 
 end

@@ -20,7 +20,14 @@ module RequestParser
     end
 
     def product
-      @message
+
+      vendor = Vendor.find(:first, :conditions => {:name => @vendor})
+      return {:error => 1, :message => "No vendors by the name #{@vendor}"} if vendor.nil?
+
+      products = Product.find(:all, :conditions => { :vendor_id => vendor.id })
+      return {:error => 1, :message => "No product for this vendor"} if products.empty?
+
+      {:error => 0, :message => @message }
     end
 
   end

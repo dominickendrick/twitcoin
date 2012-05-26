@@ -6,10 +6,12 @@ group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'
   gem 'factory_girl'
   gem "factory_girl_rails", "~> 2.0"
+  gem 'shoulda-matchers'
 end
 
 gem 'pg'
-
+gem 'foreigner'
+gem 'immigrant'
 gem 'rspec'
 gem 'rails', '3.2.2'
 gem 'thin'
